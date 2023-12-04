@@ -1,0 +1,14 @@
+.label {
+    -fx-font-family: "Arial", sans-serif;
+}
+
+.text-field, .choice-box, .button {
+    -fx-font-family: "Arial", sans-serif;
+    -fx-font-size: 12pt;
+}
+
+.result-label {
+    -fx-font-family: "Arial", sans-serif;
+    -fx-font-size: 14pt;
+    -fx-font-weight: bold;
+}
