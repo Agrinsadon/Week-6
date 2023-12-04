@@ -67,7 +67,6 @@ public class CurrencyConverterView extends Application {
         Scene scene = new Scene(grid, 300, 250);
         primaryStage.setScene(scene);
 
-// Use ClassLoader to load CSS file
         scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
 
         primaryStage.show();
