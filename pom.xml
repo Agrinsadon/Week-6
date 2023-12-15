@@ -23,6 +23,11 @@
             <version>${javafx.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.mariadb.jdbc</groupId>
+            <artifactId>mariadb-java-client</artifactId>
+            <version>3.1.0</version> <!-- Adjust version as needed -->
+        </dependency>
+        <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
             <version>${javafx.version}</version>

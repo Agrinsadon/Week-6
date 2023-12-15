@@ -1,4 +1,4 @@
-package Task2;
+package Task2.model;
 
 import java.util.HashMap;
 import java.util.Map;

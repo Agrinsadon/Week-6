@@ -1,5 +1,8 @@
-package Task2;
+package Task2.view;
 
+import Task2.controller.CurrencyConverterController;
+import Task2.dao.CurrencyDao;
+import Task2.model.CurrencyConverterModel;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -14,12 +17,11 @@ public class CurrencyConverterView extends Application {
         launch(args);
     }
 
-
-
     @Override
     public void start(Stage primaryStage) {
         CurrencyConverterModel model = new CurrencyConverterModel();
-        controller = new CurrencyConverterController(model);
+        CurrencyDao currencyDao = new CurrencyDao(); // Initialize CurrencyDao
+        controller = new CurrencyConverterController(model, currencyDao);
 
         primaryStage.setTitle("Currency Converter");
 
@@ -47,6 +49,10 @@ public class CurrencyConverterView extends Application {
             } catch (NumberFormatException | NullPointerException ex) {
                 // Handle invalid input
                 resultLabel.setText("Result: Invalid input");
+            } catch (Exception ex) {
+                // Handle other exceptions (e.g., database not available)
+                resultLabel.setText("Result: Error - " + ex.getMessage());
+                ex.printStackTrace();
             }
         });
 
